@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChefHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -20,10 +20,10 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold text-primary-foreground">E</span>
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[hsl(24,95%,53%)]">
+            <ChefHat className="h-6 w-6 text-white" />
           </div>
-          <span className="text-xl font-semibold text-foreground">ErgoChef+</span>
+          <span className="text-xl font-semibold italic text-foreground">ErgoChef+</span>
         </Link>
 
         {/* Desktop Navigation */}
