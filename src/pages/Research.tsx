@@ -12,8 +12,8 @@ const insights = [
     label: "Adoption of preventive habits by most home cooks",
   },
   {
-    stat: "Passive",
-    label: "Feedback preferred over constant alerts",
+    stat: "Real-time",
+    label: "Non-intrusive feedback preferred over constant alerts",
   },
   {
     stat: "Privacy",

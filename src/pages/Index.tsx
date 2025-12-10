@@ -72,7 +72,7 @@ export default function Index() {
               Cooking is a fundamental task that often involves repetitive actions like chopping, 
               stirring, and bending, leading to physical strain and long-term musculoskeletal problems. 
               ErgoChef+ aims to address these ergonomic issues by combining artificial intelligence 
-              with IoT technology to provide a smarter, safer, and more comfortable cooking experience.
+              with Computer Vision technology to provide a smarter, safer, and more comfortable cooking experience.
             </p>
           </div>
           
