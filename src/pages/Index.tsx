@@ -8,22 +8,22 @@ const highlights = [
   {
     icon: Search,
     title: "User Research",
-    description: "In-depth studies with professional chefs and home cooks to understand pain points.",
+    description: "In-depth surveys and interviews with home cooks and professionals.",
   },
   {
     icon: Lightbulb,
-    title: "Ideation",
-    description: "Brainstorming sessions generating 100+ concepts for ergonomic improvements.",
+    title: "AI Integration",
+    description: "Leveraging computer vision to detect and correct inefficient postures.",
   },
   {
     icon: Wrench,
     title: "Prototyping",
-    description: "Iterative prototypes tested with real users in kitchen environments.",
+    description: "Developing camera-focused designs for non-intrusive monitoring.",
   },
   {
     icon: CheckCircle,
     title: "Final Solution",
-    description: "A comprehensive system designed to reduce strain and improve kitchen health.",
+    description: "An AI-Enhanced Kitchen Assistant for health and productivity.",
   },
 ];
 
@@ -35,13 +35,13 @@ export default function Index() {
         <div className="container py-24 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
-              Design Portfolio
+              CSC3024 Design Portfolio
             </span>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Ergo-Chef
+              ErgoChef+
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-serif">
-              Designing healthier kitchen experiences through ergonomic innovation
+              AI-Powered Cooking with Posture Care
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
@@ -50,9 +50,9 @@ export default function Index() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="https://ergo-chef-health.lovable.app/" target="_blank" rel="noopener noreferrer">
-                  View Live Prototype
-                </a>
+                <Link to="/solution">
+                  View Solution
+                </Link>
               </Button>
             </div>
           </div>
@@ -69,10 +69,10 @@ export default function Index() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Project Overview</h2>
             <p className="text-lg text-muted-foreground">
-              Ergo-Chef is a comprehensive design project focused on reducing physical strain 
-              and promoting healthier practices in professional and home kitchen environments. 
-              Through rigorous research and iterative design, we developed solutions that 
-              address the ergonomic challenges faced by culinary professionals daily.
+              Cooking is a fundamental task that often involves repetitive actions like chopping, 
+              stirring, and bending, leading to physical strain and long-term musculoskeletal problems. 
+              ErgoChef+ aims to address these ergonomic issues by combining artificial intelligence 
+              with IoT technology to provide a smarter, safer, and more comfortable cooking experience.
             </p>
           </div>
           
@@ -99,27 +99,27 @@ export default function Index() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Design Journey</h2>
               <p className="text-muted-foreground mb-6">
-                From initial research to final implementation, our design process was 
-                grounded in human-centered design principles. We conducted extensive 
-                user research, created multiple prototypes, and validated our solutions 
-                through rigorous testing.
+                Our team followed a rigorous human-computer interaction design process. 
+                From identifying the limitations of current smart kitchen technologies 
+                to developing an AI-driven solution that respects user privacy and 
+                workflow preferences.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                  <span>50+ hours of user interviews and observations</span>
+                  <span>Targeted busy adults, seniors, and professionals</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                  <span>100+ design concepts generated and evaluated</span>
+                  <span>Identified key pain points: standing, bending, and repetition</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                  <span>15 prototype iterations with user feedback</span>
+                  <span>Prioritized non-intrusive, camera-based sensing over wearables</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                  <span>Validated solution with 95% user satisfaction</span>
+                  <span>Developed real-time feedback systems for posture correction</span>
                 </li>
               </ul>
               <Button asChild>
@@ -130,27 +130,12 @@ export default function Index() {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 aspect-square flex items-center justify-center">
               <div className="text-center">
-                <div className="text-6xl font-bold text-primary mb-2">95%</div>
-                <p className="text-muted-foreground">User Satisfaction Rate</p>
+                <div className="text-5xl font-bold text-primary mb-2">Passive</div>
+                <p className="text-muted-foreground text-lg">Sensing Technology</p>
+                <p className="text-sm text-muted-foreground mt-4">No wearables required</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">Experience the Prototype</h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Explore our interactive prototype and see how Ergo-Chef can transform 
-            kitchen ergonomics for professionals and home cooks alike.
-          </p>
-          <Button asChild variant="secondary" size="lg">
-            <a href="https://ergo-chef-health.lovable.app/" target="_blank" rel="noopener noreferrer">
-              Launch Prototype
-            </a>
-          </Button>
         </div>
       </section>
     </Layout>

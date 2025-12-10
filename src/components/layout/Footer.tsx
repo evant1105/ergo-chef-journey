@@ -10,10 +10,10 @@ export function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
                 <span className="text-lg font-bold text-primary-foreground">E</span>
               </div>
-              <span className="text-xl font-semibold">Ergo-Chef</span>
+              <span className="text-xl font-semibold">ErgoChef+</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Designing healthier kitchen experiences through ergonomic innovation.
+              AI-Powered Cooking with Posture Care.
             </p>
           </div>
           
@@ -39,13 +39,13 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-sm text-primary hover:underline"
             >
-              ergo-chef-health.lovable.app →
+              Launch Prototype →
             </a>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Ergo-Chef Design Project. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ErgoChef+ Design Project. All rights reserved.</p>
         </div>
       </div>
     </footer>

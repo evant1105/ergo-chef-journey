@@ -1,33 +1,33 @@
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowUpDown, Timer, Smartphone, ExternalLink } from "lucide-react";
+import { CheckCircle, Camera, MessageSquare, FileBarChart, ExternalLink } from "lucide-react";
 
 const features = [
   {
-    icon: ArrowUpDown,
-    title: "Adjustable Workstations",
-    description: "Height-adjustable counter systems that adapt to any user, reducing back strain and promoting proper posture.",
+    icon: Camera,
+    title: "AI-Powered Posture Tracking",
+    description: "Uses cameras and computer vision to detect inefficient movements (like bending or reaching) without requiring wearables.",
   },
   {
-    icon: Timer,
-    title: "Movement Reminders",
-    description: "Smart system that prompts users to change positions and take micro-breaks throughout cooking sessions.",
+    icon: MessageSquare,
+    title: "Conversational Interface",
+    description: "Provides real-time tips via voice, such as reminding you to gather ingredients or batch tasks to avoid repetition.",
   },
   {
-    icon: Smartphone,
-    title: "Digital Health Companion",
-    description: "Mobile app providing personalized ergonomic guidance, exercises, and posture tracking.",
+    icon: FileBarChart,
+    title: "Ergonomic Reporting",
+    description: "Generates summaries of your cooking sessions, offering personalized suggestions to improve posture and workflow over time.",
   },
 ];
 
 const benefits = [
-  "Reduces lower back strain by up to 60%",
-  "Decreases repetitive motion injuries",
-  "Increases cooking comfort and enjoyment",
-  "Extends professional career longevity",
-  "Adaptable to any kitchen environment",
-  "Easy integration with existing setups",
+  "Reduces physical strain and musculoskeletal risks",
+  "Optimizes cooking workflow for efficiency",
+  "Adapts to elderly, professionals, and home cooks",
+  "Non-intrusive monitoring (no wearables)",
+  "Promotes long-term healthy habits",
+  "Enhances safety in the kitchen",
 ];
 
 export default function Solution() {
@@ -39,8 +39,8 @@ export default function Solution() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Solution</h1>
             <p className="text-xl text-muted-foreground">
-              A comprehensive ergonomic system designed to transform kitchen 
-              health for professionals and home cooks alike.
+              ErgoChef+: An AI-Enhanced Kitchen Ergonomic Assistant designed to 
+              make cooking easier, safer, and more efficient.
             </p>
           </div>
         </div>
@@ -51,12 +51,11 @@ export default function Solution() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl font-bold mb-6">The Ergo-Chef System</h2>
+              <h2 className="text-2xl font-bold mb-6">The ErgoChef+ System</h2>
               <p className="text-muted-foreground mb-6">
-                Ergo-Chef is an integrated solution combining physical adjustments, 
-                smart technology, and behavioral guidance to create healthier kitchen 
-                experiences. Our approach addresses the root causes of kitchen-related 
-                strain through three interconnected components.
+                ErgoChef+ combines artificial intelligence with IoT technology to create a 
+                smart and comfortable cooking experience. Unlike traditional smart appliances 
+                that focus on automation, ErgoChef+ addresses the root causes of physical strain.
               </p>
               <div className="space-y-4">
                 {features.map((feature, index) => (
@@ -78,7 +77,7 @@ export default function Solution() {
                 <Button asChild size="lg">
                   <a href="https://ergo-chef-health.lovable.app/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Try Live Demo
+                    Try ErgoChef+ Prototype
                   </a>
                 </Button>
               </div>
@@ -104,61 +103,36 @@ export default function Solution() {
         </div>
       </section>
 
-      {/* Results */}
+      {/* Use Cases */}
       <section className="py-16">
         <div className="container">
-          <h2 className="text-2xl font-bold mb-8">Validation Results</h2>
-          <div className="grid md:grid-cols-4 gap-6">
+          <h2 className="text-2xl font-bold mb-8">Adapted for Every User</h2>
+          <div className="grid md:grid-cols-3 gap-6">
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">95%</div>
-                <p className="text-sm text-muted-foreground">User Satisfaction</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">60%</div>
-                <p className="text-sm text-muted-foreground">Pain Reduction</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">40%</div>
-                <p className="text-sm text-muted-foreground">Productivity Increase</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">8/10</div>
-                <p className="text-sm text-muted-foreground">Ease of Use Score</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* User Testimonials */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container">
-          <h2 className="text-2xl font-bold mb-8 text-center">What Users Say</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-primary-foreground/10 border-primary-foreground/20">
-              <CardContent className="pt-6">
-                <p className="italic mb-4">
-                  "After 20 years in professional kitchens, I thought pain was just 
-                  part of the job. Ergo-Chef changed everything. I can cook longer 
-                  with less discomfort."
+                <div className="mb-4 font-bold text-lg">Busy Parents</div>
+                <p className="text-sm text-muted-foreground">
+                  "ErgoChef+ reminds me to gather all ingredients first, saving me trips 
+                  across the kitchen when I'm in a rush."
                 </p>
-                <p className="text-sm opacity-80">— Executive Chef, Test Participant</p>
               </CardContent>
             </Card>
-            <Card className="bg-primary-foreground/10 border-primary-foreground/20">
+            <Card className="text-center">
               <CardContent className="pt-6">
-                <p className="italic mb-4">
-                  "The movement reminders seem simple, but they've made a huge 
-                  difference. I no longer end my cooking sessions feeling exhausted."
+                <div className="mb-4 font-bold text-lg">Older Adults</div>
+                <p className="text-sm text-muted-foreground">
+                  "It suggests where to place my heavy pots so I don't have to bend 
+                  down, which helps my back immensely."
                 </p>
-                <p className="text-sm opacity-80">— Home Cook, Test Participant</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <div className="mb-4 font-bold text-lg">Professional Chefs</div>
+                <p className="text-sm text-muted-foreground">
+                  "The posture report showed me I was leaning too much. Correcting that 
+                  has reduced my fatigue during long shifts."
+                </p>
               </CardContent>
             </Card>
           </div>
