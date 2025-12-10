@@ -1,23 +1,23 @@
 import { Layout } from "@/components/layout/Layout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Camera, MessageSquare, FileBarChart, ExternalLink } from "lucide-react";
+import { CheckCircle, Camera, MessageSquare, ChefHat, ExternalLink } from "lucide-react";
 
 const features = [
   {
     icon: Camera,
     title: "AI-Powered Posture Tracking",
-    description: "Uses cameras and computer vision to detect inefficient movements (like bending or reaching) without requiring wearables.",
+    description: "Uses your device's camera and computer vision to detect inefficient movements (like bending or reaching) in real-time without requiring wearables.",
   },
   {
     icon: MessageSquare,
-    title: "Conversational Interface",
-    description: "Provides real-time tips via voice, such as reminding you to gather ingredients or batch tasks to avoid repetition.",
+    title: "Smart Kitchen Assistant",
+    description: "An intelligent chat interface that helps with ingredient substitutions, technique tips, and health advice while you cook.",
   },
   {
-    icon: FileBarChart,
-    title: "Ergonomic Reporting",
-    description: "Generates summaries of your cooking sessions, offering personalized suggestions to improve posture and workflow over time.",
+    icon: ChefHat,
+    title: "Guided Cooking Sessions",
+    description: "Step-by-step recipe walkthroughs with integrated timers and progress tracking to keep your workflow smooth and organized.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Solution() {
             <div>
               <h2 className="text-2xl font-bold mb-6">The ErgoChef+ System</h2>
               <p className="text-muted-foreground mb-6">
-                ErgoChef+ combines artificial intelligence with IoT technology to create a 
+                ErgoChef+ combines artificial intelligence with Computer Vision technology to create a 
                 smart and comfortable cooking experience. Unlike traditional smart appliances 
                 that focus on automation, ErgoChef+ addresses the root causes of physical strain.
               </p>
