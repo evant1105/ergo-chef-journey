@@ -1,84 +1,110 @@
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb, PenTool, FlaskConical, Users, RefreshCw, CheckCircle2 } from "lucide-react";
+import { Lightbulb, PenTool, FlaskConical, Users, RefreshCw, CheckCircle2, Search, MonitorPlay } from "lucide-react";
 
 const processSteps = [
   {
     icon: Lightbulb,
-    phase: "Phase 1",
-    title: "Ideation",
+    phase: "Weeks 1-2",
+    title: "Discovery & Planning",
     duration: "2 weeks",
-    description: "Generated 100+ concepts through brainstorming sessions, sketching, and design thinking workshops.",
+    description: "Defining the problem space and planning the research approach to identify ergonomic challenges and AI opportunities.",
     activities: [
-      "Brainstorming sessions with cross-functional team",
-      "Competitive analysis of existing solutions",
-      "Concept sketching and rapid visualization",
-      "Affinity mapping to identify patterns",
+      "Defining realistic human-centered design challenges",
+      "Identifying AI opportunities for ergonomics in daily life",
+      "Developing an initial design research plan",
+      "Exploring AI applications for ergonomic challenges",
+    ],
+  },
+  {
+    icon: Search,
+    phase: "Week 3",
+    title: "Research & Analysis",
+    duration: "1 week",
+    description: "Conducting user research, analyzing findings, and identifying key themes to guide task design.",
+    activities: [
+      "Conducting design research sessions",
+      "Reflecting on first participant interactions",
+      "Refining research plans based on initial findings",
+      "Synthesizing findings into thematic insights",
     ],
   },
   {
     icon: PenTool,
-    phase: "Phase 2",
-    title: "Concept Development",
-    duration: "3 weeks",
-    description: "Refined top 10 concepts into detailed designs with specifications and feasibility assessments.",
+    phase: "Week 4",
+    title: "Ideation & Task Design",
+    duration: "1 week",
+    description: "Developing core user tasks and generating diverse initial design concepts.",
     activities: [
-      "Detailed design specifications",
-      "Technical feasibility studies",
-      "Cost-benefit analysis",
-      "Stakeholder feedback sessions",
-    ],
-  },
-  {
-    icon: FlaskConical,
-    phase: "Phase 3",
-    title: "Prototyping",
-    duration: "4 weeks",
-    description: "Created low to high fidelity prototypes for testing and validation with target users.",
-    activities: [
-      "Paper prototypes and wireframes",
-      "3D printed physical models",
-      "Interactive digital prototypes",
-      "Functional proof-of-concept builds",
+      "Developing a set of tasks to explore in designs",
+      "Generating three distinct initial design ideas",
+      "Aligning designs with identified user tasks",
+      "Brainstorming AI-driven ergonomic solutions",
     ],
   },
   {
     icon: Users,
-    phase: "Phase 4",
-    title: "User Testing",
-    duration: "3 weeks",
-    description: "Conducted extensive testing with professional chefs and home cooks in real kitchen environments.",
+    phase: "Week 5",
+    title: "Design Consolidation",
+    duration: "1 week",
+    description: "Synthesizing research, ideation, and sketches into a cohesive design narrative.",
     activities: [
-      "Usability testing sessions",
-      "A/B testing of design variants",
-      "Ergonomic assessments",
-      "Feedback collection and synthesis",
+      "Consolidating ideation, research, and task development",
+      "Creating storyboards for the proposed solution",
+      "Communicating the full design process",
+      "Preparing Milestone 2 presentation",
+    ],
+  },
+  {
+    icon: FlaskConical,
+    phase: "Week 6",
+    title: "Prototyping & Evaluation",
+    duration: "1 week",
+    description: "Building the initial paper prototype and conducting heuristic evaluations to identify early usability issues.",
+    activities: [
+      "Developing initial paper prototypes",
+      "Testing system support for primary tasks",
+      "Conducting usability heuristic evaluations",
+      "Assessing against ergonomic design principles",
     ],
   },
   {
     icon: RefreshCw,
-    phase: "Phase 5",
-    title: "Iteration",
-    duration: "4 weeks",
-    description: "Incorporated user feedback to refine designs through multiple iteration cycles.",
+    phase: "Week 7",
+    title: "Iteration & Digitalization",
+    duration: "1 week",
+    description: "Refining the design based on evaluations, conducting usability testing, and creating high-fidelity digital mockups.",
     activities: [
-      "Design revisions based on feedback",
-      "Re-testing with improved prototypes",
-      "Performance optimization",
-      "Final design validation",
+      "Documenting design revisions from heuristic feedback",
+      "Conducting 3 usability tests with real participants",
+      "Finalizing paper prototype based on user feedback",
+      "Translating prototype into a digital mockup",
+    ],
+  },
+  {
+    icon: MonitorPlay,
+    phase: "Week 8",
+    title: "Process Presentation",
+    duration: "1 week",
+    description: "Presenting the iterative journey from paper to digital, highlighting user-centered design decisions.",
+    activities: [
+      "Demonstrating design evolution and iteration",
+      "Showcasing AI and ergonomic integration",
+      "Presenting application of user-centered design",
+      "Highlighting heuristic and usability testing results",
     ],
   },
   {
     icon: CheckCircle2,
-    phase: "Phase 6",
-    title: "Final Design",
+    phase: "Weeks 9-10",
+    title: "Final Delivery & Showcase",
     duration: "2 weeks",
-    description: "Finalized design specifications and documentation for implementation.",
+    description: "Finalizing the project portfolio website and creating a compelling video showcase of the solution.",
     activities: [
-      "Complete design documentation",
-      "Implementation guidelines",
-      "User manuals and guides",
-      "Launch preparation",
+      "Publishing professional project website/portfolio",
+      "Creating a 2-minute creative concept video",
+      "Visual and verbal project summary",
+      "Communicating design impact to stakeholders",
     ],
   },
 ];
@@ -92,8 +118,8 @@ export default function Process() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Design Process</h1>
             <p className="text-xl text-muted-foreground">
-              A comprehensive look at our human-centered design methodology, 
-              from initial ideation to final implementation.
+              A comprehensive look at our 10-week human-centered design journey, 
+              from initial discovery to final digital implementation.
             </p>
           </div>
         </div>
@@ -105,20 +131,20 @@ export default function Process() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">18</div>
+                <div className="text-4xl font-bold text-primary mb-2">10</div>
                 <p className="text-muted-foreground">Weeks Total</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">6</div>
+                <div className="text-4xl font-bold text-primary mb-2">8</div>
                 <p className="text-muted-foreground">Design Phases</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">15</div>
-                <p className="text-muted-foreground">Prototype Iterations</p>
+                <div className="text-4xl font-bold text-primary mb-2">3+</div>
+                <p className="text-muted-foreground">Major Iterations</p>
               </CardContent>
             </Card>
           </div>
@@ -135,7 +161,7 @@ export default function Process() {
                           <step.icon className="h-6 w-6 text-primary" />
                         </div>
                         <div>
-                          <span className="text-sm text-muted-foreground">{step.phase}</span>
+                          <span className="text-sm text-muted-foreground font-semibold">{step.phase}</span>
                           <h3 className="font-semibold text-lg">{step.title}</h3>
                         </div>
                       </div>
