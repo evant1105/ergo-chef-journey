@@ -113,38 +113,40 @@ export default function Process() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background relative overflow-hidden">
+        <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Design Process</h1>
-            <p className="text-xl text-muted-foreground">
-              A comprehensive look at our 10-week human-centered design journey, 
+            <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">10-Week Journey</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Design Process</h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A comprehensive look at our human-centered design journey, 
               from initial discovery to final digital implementation.
             </p>
           </div>
         </div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
       </section>
 
       {/* Process Overview */}
       <section className="py-16">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">10</div>
-                <p className="text-muted-foreground">Weeks Total</p>
+            <Card className="text-center border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="pt-8 pb-8">
+                <div className="text-5xl font-bold text-primary mb-2">10</div>
+                <p className="text-muted-foreground font-medium">Weeks Total</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">8</div>
-                <p className="text-muted-foreground">Design Phases</p>
+            <Card className="text-center border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="pt-8 pb-8">
+                <div className="text-5xl font-bold text-primary mb-2">8</div>
+                <p className="text-muted-foreground font-medium">Design Phases</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">3+</div>
-                <p className="text-muted-foreground">Major Iterations</p>
+            <Card className="text-center border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="pt-8 pb-8">
+                <div className="text-5xl font-bold text-primary mb-2">3+</div>
+                <p className="text-muted-foreground font-medium">Major Iterations</p>
               </CardContent>
             </Card>
           </div>
@@ -153,7 +155,7 @@ export default function Process() {
           <div className="space-y-8">
             {processSteps.map((step, index) => (
               <div key={index} className="relative">
-                <Card className="overflow-hidden">
+                <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="md:flex">
                     <div className="md:w-1/3 p-6 bg-muted/50 flex flex-col justify-center">
                       <div className="flex items-center gap-3 mb-4">
