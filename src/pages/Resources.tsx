@@ -98,57 +98,18 @@ export default function Resources() {
               web prototype built with Lovable.
             </p>
             <Card className="p-8">
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-12 mb-6">
-                <ExternalLink className="h-12 w-12 mx-auto text-primary mb-4" />
-                <p className="font-semibold text-lg">ergo-chef-health.lovable.app</p>
+              <div className="rounded-lg mb-6 overflow-hidden">
+                <img
+                  src="/prototype-thumbnail.png"
+                  alt="ErgoChef+ Interactive Prototype"
+                  className="w-full h-auto"
+                />
               </div>
               <Button asChild size="lg">
                 <a href="https://ergo-chef-health.lovable.app/" target="_blank" rel="noopener noreferrer">
                   Launch Prototype <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
-      <section className="py-16">
-        <div className="container">
-          <h2 className="text-2xl font-bold mb-8">Additional Materials</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Card>
-              <CardContent className="pt-6">
-                <h3 className="font-semibold mb-2">Research Summary</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Detailed documentation of our user research findings and insights.
-                </p>
-                <Button variant="ghost" size="sm" className="w-full" disabled>
-                  Coming Soon
-                </Button>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <h3 className="font-semibold mb-2">Design Specifications</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Technical specifications and design guidelines for implementation.
-                </p>
-                <Button variant="ghost" size="sm" className="w-full" disabled>
-                  Coming Soon
-                </Button>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <h3 className="font-semibold mb-2">User Testing Report</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Complete results from our user testing and validation sessions.
-                </p>
-                <Button variant="ghost" size="sm" className="w-full" disabled>
-                  Coming Soon
-                </Button>
-              </CardContent>
             </Card>
           </div>
         </div>

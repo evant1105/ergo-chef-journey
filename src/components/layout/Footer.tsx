@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ChefHat } from "lucide-react";
 
 export function Footer() {
   return (
@@ -6,11 +7,11 @@ export function Footer() {
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <span className="text-lg font-bold text-primary-foreground">E</span>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                <ChefHat className="h-6 w-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-semibold">ErgoChef+</span>
+              <span className="text-xl font-semibold italic">ErgoChef+</span>
             </div>
             <p className="text-sm text-muted-foreground">
               AI-Powered Cooking with Posture Care.
@@ -25,6 +26,7 @@ export function Footer() {
               <li><Link to="/process" className="hover:text-foreground transition-colors">Design Process</Link></li>
               <li><Link to="/solution" className="hover:text-foreground transition-colors">Solution</Link></li>
               <li><Link to="/resources" className="hover:text-foreground transition-colors">Resources</Link></li>
+              <li><Link to="/about" className="hover:text-foreground transition-colors">About Us</Link></li>
             </ul>
           </div>
           
