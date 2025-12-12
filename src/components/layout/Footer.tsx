@@ -8,10 +8,10 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <ChefHat className="h-6 w-6 text-primary-foreground" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[hsl(24,95%,53%)]">
+                <ChefHat className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-semibold italic">ErgoChef+</span>
+              <span className="text-xl font-semibold italic text-foreground">ErgoChef+</span>
             </div>
             <p className="text-sm text-muted-foreground">
               AI-Powered Cooking with Posture Care.
