@@ -37,20 +37,19 @@ export default function Resources() {
                   Our comprehensive project poster summarizing the entire design 
                   journey, key findings, and final solution in a visual format.
                 </p>
-                <div className="bg-muted rounded-lg p-8 mb-6 flex items-center justify-center min-h-[200px]">
-                  <div className="text-center text-muted-foreground">
-                    <FileText className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                    <p className="text-sm">PDF Preview</p>
-                    <p className="text-xs">Coming Soon</p>
-                  </div>
+                <div className="bg-muted rounded-lg mb-6 overflow-hidden">
+                  <iframe
+                    src="/ErgoChef-Poster.pdf"
+                    className="w-full h-[300px]"
+                    title="ErgoChef Project Poster"
+                  />
                 </div>
-                <Button className="w-full" variant="outline" disabled>
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Poster (PDF)
+                <Button className="w-full" variant="outline" asChild>
+                  <a href="/ErgoChef-Poster.pdf" download="ErgoChef-Poster.pdf">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Poster (PDF)
+                  </a>
                 </Button>
-                <p className="text-xs text-muted-foreground text-center mt-2">
-                  * PDF will be available once uploaded
-                </p>
               </CardContent>
             </Card>
 
@@ -68,20 +67,21 @@ export default function Resources() {
                   Watch our video prototype demonstrating the Ergo-Chef system 
                   in action, including user interactions and key features.
                 </p>
-                <div className="bg-muted rounded-lg p-8 mb-6 flex items-center justify-center min-h-[200px]">
-                  <div className="text-center text-muted-foreground">
-                    <Play className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                    <p className="text-sm">Video Preview</p>
-                    <p className="text-xs">Coming Soon</p>
-                  </div>
+                <div className="rounded-lg mb-6 overflow-hidden aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/-QOms8I-tbM"
+                    className="w-full h-full"
+                    title="ErgoChef Video Prototype"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
-                <Button className="w-full" variant="outline" disabled>
-                  <Play className="mr-2 h-4 w-4" />
-                  Watch Video
+                <Button className="w-full" variant="outline" asChild>
+                  <a href="https://www.youtube.com/watch?v=-QOms8I-tbM" target="_blank" rel="noopener noreferrer">
+                    <Play className="mr-2 h-4 w-4" />
+                    Watch on YouTube
+                  </a>
                 </Button>
-                <p className="text-xs text-muted-foreground text-center mt-2">
-                  * Video will be embedded once available
-                </p>
               </CardContent>
             </Card>
           </div>
