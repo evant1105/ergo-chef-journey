@@ -12,7 +12,6 @@ import {
   Folder, 
   Eye, 
   CheckSquare, 
-  FileBarChart,
   Rocket
 } from "lucide-react";
 
@@ -45,7 +44,7 @@ export default function Resources() {
             </span>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Poster Card */}
             <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 group animate-in slide-in-from-bottom-8 fade-in duration-700 fill-mode-backwards" style={{ animationDelay: '0ms' }}>
               <div className="h-1.5 bg-gradient-to-r from-primary to-primary/60" />
@@ -61,7 +60,7 @@ export default function Resources() {
                   journey, key findings, and final solution.
                 </p>
                 
-                {/* Poster Preview Modal (Plan B) */}
+                {/* Poster Preview Modal */}
                 <Dialog>
                   <DialogTrigger asChild>
                     <div className="bg-muted/50 rounded-xl mb-6 overflow-hidden shadow-inner cursor-pointer relative group/image">
@@ -108,30 +107,6 @@ export default function Resources() {
               </CardContent>
             </Card>
 
-            {/* Research Report Card (Plan A) */}
-            <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 group animate-in slide-in-from-bottom-8 fade-in duration-700 fill-mode-backwards" style={{ animationDelay: '150ms' }}>
-              <div className="h-1.5 bg-gradient-to-r from-blue-400 to-blue-300" />
-              <CardHeader className="pb-4">
-                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors duration-300">
-                  <FileBarChart className="h-7 w-7 text-blue-500" />
-                </div>
-                <CardTitle className="text-xl">Research Report</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
-                  The complete academic report detailing our user research methodology, 
-                  data analysis, and ergonomic citations.
-                </p>
-                <div className="bg-muted/50 rounded-xl mb-6 h-48 flex items-center justify-center shadow-inner text-muted-foreground/50">
-                  <FileText className="h-16 w-16" />
-                </div>
-                <Button className="w-full" variant="outline" disabled>
-                  <Download className="mr-2 h-4 w-4" />
-                  Coming Soon
-                </Button>
-              </CardContent>
-            </Card>
-
             {/* Video Prototype Card */}
             <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 group animate-in slide-in-from-bottom-8 fade-in duration-700 fill-mode-backwards" style={{ animationDelay: '300ms' }}>
               <div className="h-1.5 bg-gradient-to-r from-primary to-primary/60" />
@@ -147,7 +122,7 @@ export default function Resources() {
                   in action, including user interactions.
                 </p>
                 
-                {/* Video Facade (Plan B) */}
+                {/* Video Facade */}
                 <div className="rounded-xl mb-4 overflow-hidden aspect-video shadow-inner bg-black relative">
                   {!isVideoPlaying ? (
                     <div className="w-full h-full relative cursor-pointer group/video" onClick={() => setIsVideoPlaying(true)}>
@@ -173,13 +148,13 @@ export default function Resources() {
                   )}
                 </div>
 
-                {/* Key Moments (Plan A) */}
+                {/* Key Moments */}
                 <div className="bg-muted/30 rounded-lg p-3 text-sm">
                   <span className="font-semibold text-primary block mb-2 text-xs uppercase tracking-wider">Key Moments</span>
                   <ul className="space-y-1 text-muted-foreground">
-                    <li className="flex justify-between"><span>Posture Analysis</span> <span className="font-mono text-xs">0:45</span></li>
-                    <li className="flex justify-between"><span>Smart Chat</span> <span className="font-mono text-xs">1:20</span></li>
-                    <li className="flex justify-between"><span>Recipe Walkthrough</span> <span className="font-mono text-xs">2:10</span></li>
+                    <li className="flex justify-between"><span>App Navigation & Recipes</span> <span className="font-mono text-xs">0:00</span></li>
+                    <li className="flex justify-between"><span>Smart Chat Interaction</span> <span className="font-mono text-xs">0:15</span></li>
+                    <li className="flex justify-between"><span>Posture Analysis Demo</span> <span className="font-mono text-xs">0:35</span></li>
                   </ul>
                 </div>
               </CardContent>
@@ -216,7 +191,7 @@ export default function Resources() {
                 </Card>
               </div>
 
-              {/* Prototype Actions & Missions (Plan A) */}
+              {/* Prototype Actions & Missions */}
               <div className="md:col-span-2 space-y-6 animate-in slide-in-from-right-8 fade-in duration-700">
                 <Card>
                   <CardHeader>
@@ -255,7 +230,7 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Sticky Mobile CTA (Plan B) */}
+      {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-6 right-6 z-50 animate-in fade-in zoom-in duration-500 delay-1000">
         <Button asChild size="lg" className="rounded-full shadow-2xl h-14 w-14 p-0 bg-primary hover:bg-primary/90">
           <a href="https://ergo-chef-health.lovable.app/" target="_blank" rel="noopener noreferrer" aria-label="Launch Prototype">

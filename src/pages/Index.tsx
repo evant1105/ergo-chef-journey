@@ -45,7 +45,7 @@ export default function Index() {
               AI-Powered Cooking with Posture Care
             </p>
             
-            {/* Buttons removed from here as requested */}
+            {/* Buttons removed from here */}
             
           </div>
         </div>
