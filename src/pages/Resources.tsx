@@ -148,13 +148,13 @@ export default function Resources() {
                   )}
                 </div>
 
-                {/* Key Moments */}
+                {/* Key Moments - UPDATED */}
                 <div className="bg-muted/30 rounded-lg p-3 text-sm">
                   <span className="font-semibold text-primary block mb-2 text-xs uppercase tracking-wider">Key Moments</span>
                   <ul className="space-y-1 text-muted-foreground">
-                    <li className="flex justify-between"><span>App Navigation & Recipes</span> <span className="font-mono text-xs">0:00</span></li>
-                    <li className="flex justify-between"><span>Smart Chat Interaction</span> <span className="font-mono text-xs">0:15</span></li>
-                    <li className="flex justify-between"><span>Posture Analysis Demo</span> <span className="font-mono text-xs">0:35</span></li>
+                    <li className="flex justify-between"><span>App Navigation & Recipes</span> <span className="font-mono text-xs">0:25</span></li>
+                    <li className="flex justify-between"><span>Smart Chat Interaction</span> <span className="font-mono text-xs">0:48</span></li>
+                    <li className="flex justify-between"><span>Posture Analysis Demo</span> <span className="font-mono text-xs">1:00</span></li>
                   </ul>
                 </div>
               </CardContent>
