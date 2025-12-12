@@ -8,6 +8,7 @@ import Research from "./pages/Research";
 import Process from "./pages/Process";
 import Solution from "./pages/Solution";
 import Resources from "./pages/Resources";
+import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/process" element={<Process />} />
           <Route path="/solution" element={<Solution />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

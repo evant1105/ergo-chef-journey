@@ -10,6 +10,7 @@ const navItems = [
   { label: "Design Process", path: "/process" },
   { label: "Solution", path: "/solution" },
   { label: "Resources", path: "/resources" },
+  { label: "About Us", path: "/about" },
 ];
 
 export function Navigation() {
