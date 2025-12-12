@@ -38,10 +38,10 @@ export default function Resources() {
                   journey, key findings, and final solution in a visual format.
                 </p>
                 <div className="bg-muted rounded-lg mb-6 overflow-hidden">
-                  <iframe
-                    src="/ErgoChef-Poster.pdf"
-                    className="w-full h-[300px]"
-                    title="ErgoChef Project Poster"
+                  <img
+                    src="/ErgoChef-Poster.jpg"
+                    alt="ErgoChef Project Poster"
+                    className="w-full h-auto"
                   />
                 </div>
                 <Button className="w-full" variant="outline" asChild>
