@@ -35,7 +35,7 @@ export default function Index() {
         <div className="container py-24 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
-              CSC3024 Design Portfolio
+              HCI 1-1 Design Portfolio
             </span>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
               ErgoChef+
