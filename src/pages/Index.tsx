@@ -44,19 +44,9 @@ export default function Index() {
             <p className="text-xl md:text-2xl text-muted-foreground mb-10 font-serif animate-fade-in">
               AI-Powered Cooking with Posture Care
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <Button asChild size="lg" className="group shadow-lg hover:shadow-xl transition-all duration-300">
-                <Link to="/research">
-                  Explore Our Process 
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="hover:bg-primary/5 transition-all duration-300">
-                <Link to="/solution">
-                  View Solution
-                </Link>
-              </Button>
-            </div>
+            
+            {/* Buttons removed from here as requested */}
+            
           </div>
         </div>
         
@@ -76,7 +66,7 @@ export default function Index() {
               Cooking is a fundamental task that often involves repetitive actions like chopping, 
               stirring, and bending, leading to physical strain and long-term musculoskeletal problems. 
               ErgoChef+ aims to address these ergonomic issues by combining artificial intelligence 
-              with IoT technology to provide a smarter, safer, and more comfortable cooking experience.
+              with Computer Vision technology to provide a smarter, safer, and more comfortable cooking experience.
             </p>
           </div>
           
