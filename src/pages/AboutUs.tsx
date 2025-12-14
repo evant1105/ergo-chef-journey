@@ -2,12 +2,14 @@ import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { User, Heart } from "lucide-react";
 
+const STORAGE_URL = "https://nhhrvyjpscpiamdkujre.supabase.co/storage/v1/object/public/aboutusimages";
+
 const teamMembers = [
   { name: "Evan Teong Jian King", image: "" },
-  { name: "Nik Ahmad", image: "" },
-  { name: "Malcolm Jeremiah Richard", image: "" },
-  { name: "Lee Wen Zheh", image: "" },
-  { name: "Dina Kamelia Husaini", image: "" },
+  { name: "Nik Ahmad", image: `${STORAGE_URL}/Nik Ahmad.jpg` },
+  { name: "Malcolm Jeremiah Richard", image: `${STORAGE_URL}/Malcolm Richard.jpg` },
+  { name: "Lee Wen Zheh", image: `${STORAGE_URL}/Lee Wen Zheh.jpg` },
+  { name: "Dina Kamelia Husaini", image: `${STORAGE_URL}/Dina.jpg` },
   { name: "Adam Tan", image: "" },
 ];
 
