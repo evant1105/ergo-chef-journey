@@ -99,7 +99,11 @@ export default function Resources() {
                     </DialogContent>
                   </Dialog>
                   <Button className="flex-1 shadow-sm hover:shadow-md transition-all" asChild>
-                    <a href="/ErgoChef-Poster.pdf" download="ErgoChef-Poster.pdf">
+                    <a 
+                      href="https://nhhrvyjpscpiamdkujre.supabase.co/storage/v1/object/public/poster//ErgoChef+%20(1).pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       <Download className="mr-2 h-4 w-4" /> PDF
                     </a>
                   </Button>
@@ -148,7 +152,7 @@ export default function Resources() {
                   )}
                 </div>
 
-                {/* Key Moments - UPDATED */}
+                {/* Key Moments */}
                 <div className="bg-muted/30 rounded-lg p-3 text-sm">
                   <span className="font-semibold text-primary block mb-2 text-xs uppercase tracking-wider">Key Moments</span>
                   <ul className="space-y-1 text-muted-foreground">
