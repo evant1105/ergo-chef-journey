@@ -2,11 +2,19 @@ import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 type Message = { role: "user" | "assistant"; content: string };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
+
+// Simple markdown cleaner - removes ** and formats text
+const formatMessage = (text: string) => {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "$1") // Remove bold markers
+    .replace(/\*(.*?)\*/g, "$1")     // Remove italic markers
+    .replace(/^\s*[-•]\s*/gm, "• ")  // Normalize bullet points
+    .replace(/\n{3,}/g, "\n\n");     // Limit consecutive newlines
+};
 
 export const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +23,14 @@ export const Chatbot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
+    scrollToBottom();
   }, [messages]);
 
   const sendMessage = async () => {
@@ -74,14 +84,15 @@ export const Chatbot = () => {
             const content = parsed.choices?.[0]?.delta?.content;
             if (content) {
               assistantContent += content;
+              const formattedContent = formatMessage(assistantContent);
               setMessages(prev => {
                 const last = prev[prev.length - 1];
                 if (last?.role === "assistant" && prev.length > 1) {
                   return prev.map((m, i) => 
-                    i === prev.length - 1 ? { ...m, content: assistantContent } : m
+                    i === prev.length - 1 ? { ...m, content: formattedContent } : m
                   );
                 }
-                return [...prev, { role: "assistant", content: assistantContent }];
+                return [...prev, { role: "assistant", content: formattedContent }];
               });
             }
           } catch {
@@ -114,15 +125,15 @@ export const Chatbot = () => {
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 rounded-xl border bg-background shadow-2xl flex flex-col max-h-[500px]">
+        <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 rounded-xl border bg-background shadow-2xl flex flex-col h-[500px]">
           {/* Header */}
-          <div className="p-4 border-b bg-primary text-primary-foreground rounded-t-xl">
+          <div className="p-4 border-b bg-primary text-primary-foreground rounded-t-xl shrink-0">
             <h3 className="font-semibold">ErgoChef+ Assistant</h3>
             <p className="text-xs opacity-80">Ask me about the project</p>
           </div>
 
-          {/* Messages */}
-          <ScrollArea className="flex-1 p-4" ref={scrollRef}>
+          {/* Messages - scrollable container */}
+          <div className="flex-1 overflow-y-auto p-4">
             <div className="space-y-4">
               {messages.map((msg, i) => (
                 <div
@@ -130,7 +141,7 @@ export const Chatbot = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[80%] rounded-lg px-3 py-2 text-sm ${
+                    className={`max-w-[80%] rounded-lg px-3 py-2 text-sm whitespace-pre-wrap ${
                       msg.role === "user"
                         ? "bg-primary text-primary-foreground"
                         : "bg-muted text-muted-foreground"
@@ -147,11 +158,12 @@ export const Chatbot = () => {
                   </div>
                 </div>
               )}
+              <div ref={messagesEndRef} />
             </div>
-          </ScrollArea>
+          </div>
 
           {/* Input */}
-          <div className="p-4 border-t flex gap-2">
+          <div className="p-4 border-t flex gap-2 shrink-0">
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
