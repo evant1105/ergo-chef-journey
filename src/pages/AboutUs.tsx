@@ -5,12 +5,12 @@ import { User, Heart } from "lucide-react";
 const STORAGE_URL = "https://nhhrvyjpscpiamdkujre.supabase.co/storage/v1/object/public/aboutusimages";
 
 const teamMembers = [
-  { name: "Evan Teong Jian King", image: '${STORAGE_URL}/Evan Teong.jpg' },
+  { name: "Evan Teong Jian King", image: `${STORAGE_URL}/Evan Teong.jpg`},
   { name: "Nik Ahmad", image: `${STORAGE_URL}/Nik Ahmad.jpg` },
   { name: "Malcolm Jeremiah Richard", image: `${STORAGE_URL}/Malcolm Richard.jpg` },
   { name: "Lee Wen Zheh", image: `${STORAGE_URL}/Lee Wen Zheh.jpg` },
   { name: "Dina Kamelia Husaini", image: `${STORAGE_URL}/Dina.jpg` },
-  { name: "Adam Tan", image: '${STORAGE_URL}/Adam Tan.png' },
+  { name: "Adam Tan", image: `${STORAGE_URL}/Adam Tan.png` },
 ];
 
 export default function AboutUs() {
